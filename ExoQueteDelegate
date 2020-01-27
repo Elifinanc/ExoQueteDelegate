@@ -6,22 +6,22 @@ namespace ExoQueteDelegate
     {
         static void Main(string[] args)
         {
-            Del showMoney = MethodWithEuro;
+            ShowMoney showMoney = MethodWithEuro;
             Console.WriteLine(showMoney(8,5,"Euro"));
             showMoney = MethodWithDollar;
             Console.WriteLine(showMoney(6, 3, "$"));
         }
 
-        public delegate string Del(int a, int b, string c);
+        public delegate string ShowMoney(int a, int b, string c);
 
         public static string MethodWithEuro(int x, int y, string w)
         {
-            return (x + y).ToString() + "Euro";
+            return (x + y).ToString() + "w";
         }
 
         public static string MethodWithDollar(int x, int y, string w)
         {
-            return (x + y).ToString() + "$";
+            return (x + y).ToString() + "w";
         }
     }
 }
